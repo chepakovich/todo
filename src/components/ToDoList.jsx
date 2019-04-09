@@ -20,7 +20,7 @@ class ToDoList extends Component {
         const { hovering } = this.state;
         const { todo, removeTodo, onChange } = this.props;
         return (<>
-            <li className={"toDoList" + (todo.completed ? 'strikethrough' : '')} onMouseEnter={this.onMouseOver} onMouseLeave={this.onMouseLeave}>{todo.value} {hovering && <button onClick={(e) => removeTodo(e, todo.id)}>x</button>}<input type="checkbox" onChange={(e) => onChange(e, todo.id)} /></li>
+            <div className={"toDoList" + (todo.completed ? 'strikethrough' : '')} onMouseEnter={this.onMouseOver} onMouseLeave={this.onMouseLeave}>{todo.value} {hovering && <button onClick={(e) => removeTodo(e, todo.id)}>x</button>}<input type="checkbox" onChange={(e) => onChange(e, todo.id)} /></div>
         </>);
     }
 }

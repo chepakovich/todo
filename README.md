@@ -1,5 +1,10 @@
 # ToDo App
 
+Here is a screenshot of the app:
+<p align="center">
+  <img src="public/screenshot.png" width="320"/>
+</p>
+
 ## Available Scripts
 
 In the project directory, you can run:

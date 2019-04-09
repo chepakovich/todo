@@ -54,11 +54,13 @@ class ToDo extends Component {
     render() {
         const { toDos, toDoInput } = this.state;
         return (<>
-            <div className="flexItem header">To-Do</div>
-            <div className="flexItem"><input name="toDoInput" value={toDoInput} onChange={this.onInputChange} type="text" placeholder="New" onKeyPress={this.handleKeyPress} autoFocus /><span>+</span></div>
-            {toDos.map((todo) => <ul key={todo.id}>
-                <ToDoList todo={todo} onChange={this.onChange} removeTodo={this.removeTodo} />
-            </ul>)}
+            <div className="header">To-Do</div>
+            <div className="input"><input name="toDoInput" value={toDoInput} onChange={this.onInputChange} type="text" placeholder="New" onKeyPress={this.handleKeyPress} autoFocus /><span>+</span></div>
+            <div className="list">
+                {toDos.map((todo) => <div key={todo.id}>
+                    <ToDoList todo={todo} onChange={this.onChange} removeTodo={this.removeTodo} />
+                </div>)}
+            </div>
             <Counter count={formatCount(toDos)} />
         </>);
     }

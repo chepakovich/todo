@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ToDoCounter = ({ count }) => {
-    return (<div>
-        {count}
-    </div>)
+    return (
+        <div className="counter">
+            {count}
+        </div>
+    )
 }
 
 export default ToDoCounter;
